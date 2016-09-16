@@ -32,7 +32,9 @@ first(names, function(firstName){
   console.log('The first name in names is ' + firstName)
 });
 
-
+function first(arr, cb){    
+  cb(arr[0]);
+}
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
@@ -45,6 +47,10 @@ last(names, function(lastName){
   console.log('The last name in names is ' + lastName);
 });
 
+function last(arr, cb) {
+  var lastIndex = arr.length - 1;
+  cb(arr[lastIndex]);
+}
 
 
 
@@ -62,7 +68,9 @@ multiply(4, 3, function(answer){
   console.log('The answer is ' + answer); //should console.log 12
 })
 
-
+function multiply(num1, num2, product) {
+  product(num1 * num2);
+}
 
 
 
