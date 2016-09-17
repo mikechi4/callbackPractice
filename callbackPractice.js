@@ -126,7 +126,16 @@ uniq(names, function(uniqArr){
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
-
+function each(arr, cb) {
+  var val;
+  var index;
+  for(var i = 0; i < arr.length; i++) {
+    val = arr[i];
+    index = i;
+    cb(val, index);
+  }
+  
+}
 
 
     //Code Here for each
