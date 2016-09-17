@@ -69,7 +69,7 @@ multiply(4, 3, function(answer){
 })
 
 function multiply(num1, num2, product) {
-  product(num1 * num2);
+  product(num1 * num2); 
 }
 
 
@@ -90,14 +90,29 @@ contains(names, 'Colt', function(result){
   }
 });
 
-
+function contains(arr, str, cb) {
+  for(var i = 0; i < arr.length; i++) {
+    if(arr[i] === str) {
+      return cb(true);
+    } 
+  }
+  cb(false);
+}
 
 
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
 
-
+function uniq(arr, cb){
+  var uniqueArr = [];
+  for(var i = 0; i < arr.length; i++) {
+    if(uniqueArr.indexOf(arr[i]) === - 1) {
+      uniqueArr.push(arr[i])
+    }
+  }
+  cb(uniqueArr);
+}
 
     //Code Here for uniq
 
